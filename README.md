@@ -1,61 +1,54 @@
-# 🚀 Getting started with Strapi
+# Strapi Project Setup
 
-Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/dev-docs/cli) (CLI) which lets you scaffold and manage your project in seconds.
+## Task Overview
+This project demonstrates the setup of a Strapi application using the recommended approach. The goal is to set up Strapi locally, explore its folder structure, create a sample content type, and push the setup to GitHub.
 
-### `develop`
+## Steps Taken
 
-Start your Strapi application with autoReload enabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-develop)
+### 1. Setup Strapi Project Locally
+To quickly get a Strapi project running, I used the following command to create and start the project:
 
-```
-npm run develop
-# or
-yarn develop
-```
 
-### `start`
+npx create-strapi-app my-strapi-app --quickstart
 
-Start your Strapi application with autoReload disabled. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-start)
 
-```
-npm run start
-# or
-yarn start
-```
+This command:
+- Creates a new Strapi project named `my-strapi-app`.
+- Installs the necessary dependencies.
+- Starts the Strapi application in development mode with the admin panel running on `http://localhost:1337`.
 
-### `build`
+### 2. Explore Folder Structure
+After the project was created, I explored the folder structure to understand the components of the application:
 
-Build your admin panel. [Learn more](https://docs.strapi.io/dev-docs/cli#strapi-build)
+- `api/`: Contains the models and controllers for content types.
+- `config/`: Contains configuration files for the application.
+- `node_modules/`: Standard node modules directory where dependencies are installed.
+- `public/`: The public directory for serving static files.
+- `package.json`: Contains the metadata and dependencies for the Strapi application.
 
-```
-npm run build
-# or
-yarn build
-```
+### 3. Create a Sample Content Type
+I used the Strapi admin panel to create a sample content type. The steps were as follows:
+1. Opened the admin panel at `http://localhost:1337/admin`.
+2. Logged in using the provided credentials.
+3. Created a new content type named "Article" with the following fields:
+   - Title (Text)
+   - Content (Rich Text)
 
-## ⚙️ Deployment
+This content type is now available to be managed via the Strapi admin panel.
 
-Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
+### 4. Push to GitHub
+Once the setup was completed and tested locally, I initialized a Git repository, added all files, and pushed the setup to GitHub.
 
-```
-yarn strapi deploy
-```
 
-## 📚 Learn more
+git init
+git add .
+git commit -m "Initial commit: Strapi project setup"
+git remote add origin <https://github.com/PearlThoughts-DevOps-Internship/strapi--Monitor-hub.git>
+git push -u origin master
 
-- [Resource center](https://strapi.io/resource-center) - Strapi resource center.
-- [Strapi documentation](https://docs.strapi.io) - Official Strapi documentation.
-- [Strapi tutorials](https://strapi.io/tutorials) - List of tutorials made by the core team and the community.
-- [Strapi blog](https://strapi.io/blog) - Official Strapi blog containing articles made by the Strapi team and the community.
-- [Changelog](https://strapi.io/changelog) - Find out about the Strapi product updates, new features and general improvements.
 
-Feel free to check out the [Strapi GitHub repository](https://github.com/strapi/strapi). Your feedback and contributions are welcome!
+### 7. Documenting the Process
+I have documented the steps I followed in this README file for reference.
 
-## ✨ Community
-
-- [Discord](https://discord.strapi.io) - Come chat with the Strapi community including the core team.
-- [Forum](https://forum.strapi.io/) - Place to discuss, ask questions and find answers, show your Strapi project and get feedback or just talk with other Community members.
-- [Awesome Strapi](https://github.com/strapi/awesome-strapi) - A curated list of awesome things related to Strapi.
-
----
-
-<sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>
+## Conclusion
+This task involved setting up Strapi locally, exploring its structure, creating a sample content type, and pushing the setup to GitHub. The process was simple using the `npx create-strapi-app` command and the Strapi admin panel.
